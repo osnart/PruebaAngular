@@ -1,0 +1,35 @@
+{% extends "side_up.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Tabla de contenido</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Matricula</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Sala</th>
+                <th scope="col">Hora </th>
+                <th scope="col">Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for horario in lista_horarios_sala %}
+            <tr>
+                <td>{{horario.id}} </td>
+                <td>{{horario.matricula}} </td>
+                <td>{{horario.nombre}} </td>
+                <td>{{horario.sala}} </td>
+                <td>{{horario.hora}} </td>
+                <td>
+                    <a class="btn btn-outline-secondary" href="{% url 'edit_asistencia' horario.id %}">Actualizar </a>
+                    <a class="btn btn-outline-secondary" href="{% url 'delete_asistencia' horario.id %}">Eliminar </a>
+                </td>
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

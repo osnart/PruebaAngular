@@ -1,0 +1,42 @@
+{% extends "side_up.html" %}
+
+{% block content %}
+
+
+{% load widget_tweaks %}
+<div class="container">
+    <form method="POST" action="/update/{{horario.id}}">
+        {% csrf_token %}
+        <h3>Editar Valores </h3>
+        <input type="text" hidden="true" name="id" value="{{ horario.id }}" class="form-control" />
+        <br>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Matrícula:</label>
+            <input type="text" class="form-control" placeholder="matrícula" name="matricula" id="id_matricula" required
+                maxlength="50" value="{{ horario.matricula }}">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nombre:</label>
+            <input type="text" class="form-control" placeholder="matrícula" name="nombre" id="id_nombre" required
+                maxlength="50" value="{{ horario.nombre }}">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Sala:</label>
+            <input type="text" class="form-control" placeholder="matrícula" name="sala" id="id_sala" required
+                maxlength="50" value="{{ horario.sala }}">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Hora:</label>
+            <input type="text" class="form-control" placeholder="matrícula" name="hora" id="id_hora" required
+                maxlength="50" value="{{ horario.hora }}">
+        </div>
+
+        <button class="btn btn-outline-secondary" type="submit">Enviar </button>
+
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "side_up.html" %}
+
+{% block content %}
+
+<div class="container py-4">
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Acerca de</h1>
+            <p class="col-md-8 fs-4">Aplicación para llevar un registro de las asistencias en sala de computo en el
+                CETI.</p>
+            <p style="text-align: justify;">El Laboratorio de Informática es un espacio físico de 8.00 x 12.00 mts.,
+                adaptado con equipo de cómputo, periféricos, equipo de medición, software, manuales y mobiliario
+                dispuesto para ofrecer a los alumnos y profesores de la Licenciatura en Informática, las herramientas
+                necesarias que facilitan el desarrollo de prácticas en las asignaturas del Plan de Estudios que así lo
+                requieren. Además, se proporciona equipo y software a los Profesores-Investigadores que participan en
+                los diversos cuerpos académicos para el desarrollo de sus proyectos de Investigación.
+
+                El área de Sistemas Digitales del Laboratorio de Informática tiene una distribución física de 8.00 x
+                6.00 mts. Aquí se encuentran ubicados el equipo de cómputo, equipo de medición, software y mobiliario
+                para materias de las áreas de conocimiento de Arquitectura de Computadoras y Redes. Además este espacio
+                es utilizado para llevar a cabo talleres que se imparten durante el verano a la comunidad universitaria
+                interesada, tales como el Taller de Mantenimiento Preventivo y Correctivo de Equipo de Cómputo.
+
+                Por su parte, el área de Ingeniería de Software cuenta con un espacio de 8.00 x 6.00 mts. En esta área
+                se encuentra el equipo de cómputo, software, periféricos y mobiliario que se utilizan en las prácticas
+                relacionadas con materias de las áreas de conocimiento de Tratamiento de Información, Interacción
+                Humano-Computadora, Software Base y Programación e Ingeniería de Software.</p>
+            <!-- <button class="btn btn-primary btn-lg" type="button">Example button</button> -->
+        </div>
+    </div>
+
+    <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+            <div class="h-100 p-5 text-white  rounded-3" style="background-color:#B22222;">
+                <h2>CETI</h2>
+                <p>Centro de Tecnologías de la información</p>
+                <a class="btn btn-outline-secondary" href="{% url 'index' %}"> Listar Alumnos</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="h-100 p-5 bg-light border rounded-3">
+                <h2>Ver lista de alumnos</h2>
+                <p>La aplicación se encarga de llevar un registro de los alumnos, horarios, además de tomar asistencia.
+                </p>
+                <a class="btn btn-outline-secondary" href="{% url 'index' %}"> Listar Alumnos</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
